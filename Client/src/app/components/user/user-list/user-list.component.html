@@ -1,0 +1,12 @@
+<div class="users">
+  <ul>
+    <li class="profile" *ngFor="let user of userList | userPipe :'nom': smarthome" (click)="onSelect(user)">
+      <div class="user-square">
+        <img src="http://webh.ddns.net{{ user.avatar }}" alt="<( ^-^')>" style="width:150px;height:150px;border:0;" />
+      </div>
+      <span>
+        {{user.nom}}
+      </span>
+    </li>
+  </ul>
+</div>

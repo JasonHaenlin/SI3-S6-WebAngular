@@ -1,0 +1,21 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .incident-container {
+    margin: 0 0.5em;
+  }
+}
+
+/* show reverse by vertical column */
+
+.column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.incident-container {
+  padding-top: 1em;
+}

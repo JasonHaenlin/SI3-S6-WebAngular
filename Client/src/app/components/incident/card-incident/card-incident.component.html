@@ -1,0 +1,34 @@
+<mat-card class="card">
+  <!-- header -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <mat-card-header>
+        <img mat-card-avatar class="header-image" src="http://webh.ddns.net{{avatar}}" alt="*-*">
+        <mat-card-title (click)=selectUser(incident.nom,$event)>{{incident.nom}}</mat-card-title>
+        <mat-card-subtitle>{{incident.date | date : "d MMM y à HH:mm"}}</mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <div class="col-md-4">
+      <avancement class="container_center_pos" (updateGravity)="onGravityChange($event)" [etat]='incident.etat'></avancement>
+    </div>
+    <div class="col-md-4">
+      <app-gravity-gauge class="container_right_pos" ampleur={{incident.ampleur}}></app-gravity-gauge>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- content -->
+    <div class="col-md-6">
+      <mat-card-content class="margin_text">
+        {{incident.declaration}}
+      </mat-card-content>
+    </div>
+    <div class="col-md-6" id="boutons">
+      <!-- buttons -->
+      <button mat-button class="container_right_pos" color="warn" (click)="openDialog(incident)">
+        <mat-icon aria-label="supprimer">delete forever</mat-icon>SUPPRIMER</button>
+      <ngbd-modal-component class="container_right_pos" [incident]='incident'></ngbd-modal-component>
+    </div>
+  </div>
+</mat-card>

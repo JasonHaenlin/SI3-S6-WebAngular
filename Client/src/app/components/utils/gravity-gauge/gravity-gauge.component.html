@@ -1,0 +1,42 @@
+<div class="row">
+
+  <div class="criticite">
+    Criticité :
+  </div>
+  <div title="Importance de la tâche">
+    <ng-container *ngIf="ampleur=='Faible';else second">
+      <span class="faible"></span>
+      <span class="dislabe"></span>
+      <span class="dislabe"></span>
+      <span class="dislabe"></span>
+
+    </ng-container>
+    <ng-template #second>
+      <ng-container *ngIf="ampleur=='Moyen';else third">
+        <span class="moyen"></span>
+        <span class="moyen"></span>
+        <span class="dislabe"></span>
+        <span class="dislabe"></span>
+
+
+      </ng-container>
+    </ng-template>
+    <ng-template #third>
+      <ng-container *ngIf="ampleur=='Grave';else fourth">
+        <span class="grave"></span>
+        <span class="grave"></span>
+        <span class="grave"></span>
+        <span class="dislabe"></span>
+
+      </ng-container>
+    </ng-template>
+    <ng-template #fourth>
+      <ng-container *ngIf="ampleur=='Critique'">
+        <span class="critique"></span>
+        <span class="critique"></span>
+        <span class="critique"></span>
+        <span class="critique"></span>
+      </ng-container>
+    </ng-template>
+  </div>
+</div>

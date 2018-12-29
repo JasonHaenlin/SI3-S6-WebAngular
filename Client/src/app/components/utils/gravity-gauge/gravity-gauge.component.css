@@ -1,0 +1,37 @@
+.faible {
+  background-color: #a0f57e;
+}
+
+.moyen {
+  background-color: #dbd800;
+}
+
+.grave {
+  background-color: #f1a500;
+}
+
+.critique {
+  background-color: #da5000;
+}
+.dislabe {
+ background-color: white;
+}
+span {
+  display: inline-block;
+  border-radius: 4px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: #818181;
+
+  width: 20px;
+  height: 20px;
+  margin-top:10px;
+}
+.criticite{
+  margin-right: 10px;
+  margin-left: 15px;
+  color:#5f5f5f;
+  font-size: 15px;
+  margin-top:10px;
+
+}

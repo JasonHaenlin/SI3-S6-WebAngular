@@ -1,0 +1,13 @@
+<mat-card class="user-card">
+  <mat-card-header>
+    <mat-card-title>{{user.nom}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image src="http://webh.ddns.net{{user.avatar}}" alt="*-*">
+
+
+  <app-user-change (notifyParent)="onModalClose($event)" [user]="user"></app-user-change>
+  <button mat-button color="warn" (click)="openDialog()">
+    <mat-icon aria-label="supprimer">delete forever</mat-icon>SUPPRIMER</button>
+
+</mat-card>

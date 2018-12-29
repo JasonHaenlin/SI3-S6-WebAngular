@@ -1,0 +1,59 @@
+<div class="modal-header">
+  <h2 class="modal-title">Modification Incident</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body modal-container">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5>Description</h5>
+        <mat-form-field class="example-full-width">
+          <textarea matInput #input matTextareaAutosize maxlength="150" matAutosizeMinRows="2" matAutosizeMaxRows="5" [(ngModel)]="incident.declaration"></textarea>
+          <mat-hint align="end">{{input.value?.length || 0}}/150</mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Auteur</h5>
+        <p class="font-p">{{incident.nom}}</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Date </h5>
+        <p class="font-p">
+          {{incident.date | date : "d MMM y h:mm:a"}}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 criticite">
+        <h5>Criticité</h5>
+        <select name=criticite class="form-control" [(ngModel)]="incident.ampleur">
+          <option *ngFor="let criticite of criticites" [ngValue]="criticite.ampleur"> {{criticite.ampleur}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <h5>Avancement</h5>
+        <select name=avancement class="form-control" [(ngModel)]="incident.etat">
+          <option *ngFor="let s of state" [ngValue]="s.etat"> {{s.etat}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Lieu</h5>
+        <select name=user class="form-control" [(ngModel)]="incident.lieu">
+          <option *ngFor="let loc of localisation" [ngValue]="loc.lieu"> {{loc.lieu}}</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="annuler()">Fermer</button>
+      <button type="button" class="btn btn-outline-dark" (click)="enregistrer()">Enregistrer</button>
+    </div>
+  </div>
+</div>

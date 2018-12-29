@@ -1,0 +1,39 @@
+<div class="modal-header">
+	<h2 class="modal-title">Nouvelle Notification</h2>
+	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+  </div>
+  <div class="modal-body modal-container">
+	<div class="container">
+	  <div class="row">
+		<div class="col">
+		  <h5>Description</h5>
+		  <mat-form-field class="example-full-width">
+			<textarea id="notifDescription" matInput #input matTextareaAutosize maxlength="150" matAutosizeMinRows="2" matAutosizeMaxRows="5" [(ngModel)]="this.description"></textarea>
+			<mat-hint align="end">{{input.value?.length || 0}}/150</mat-hint>
+		  </mat-form-field>
+		</div>
+	  </div>
+	
+	  <div class="row">
+		<div class="col-md-6 criticite">
+		  <h5>Destinataires</h5>
+		  <select name=destinataires class="form-control" [(ngModel)]="this.destinataires" multiple>
+			<option *ngFor="let user of users" [ngValue]="user.nom"> {{user.nom}}</option>
+		  </select>
+		</div>
+		
+	  </div>
+	  
+	  <div class="row">
+		<p *ngIf="errorField" class="error"> Vous devez entrer une description et selectionner une ou plusieurs personnes !</p>
+	  </div>
+
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-outline-dark" (click)="annuler()">Fermer</button>
+		<button type="button" class="btn btn-outline-dark" (click)="valider()">Valider</button>
+	  </div>
+	</div>
+  </div>
+  

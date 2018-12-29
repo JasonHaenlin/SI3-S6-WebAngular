@@ -1,0 +1,25 @@
+.etat {
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.annule {
+  color: #ee4f4f;
+}
+
+.enCours {
+  color: #b36bc5;
+}
+
+.enAttente {
+  color: #e08530;
+}
+
+.prisEnCompte {
+  color: #56b84d;
+}
+
+.termine {
+  color: #3b5ae7;
+}

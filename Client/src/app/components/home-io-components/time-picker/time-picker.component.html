@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-3" style="margin-left: 1em;">
+      <div>Début :
+        <ngb-timepicker [(ngModel)]="timeBegin" [meridian]="meridian"></ngb-timepicker>
+      </div>
+    </div>
+    <div class="col-md-3" style="margin-left: 1em;">
+      <div>Fin :
+        <ngb-timepicker [(ngModel)]="timeEnd" [meridian]="meridian"></ngb-timepicker>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="error" class="error"> Vous ne devez pas entrer la même heure!</p>
+  <p *ngIf="validate" class="valid"> plage horaire mise à jour!</p>
+  <p *ngIf="resetAlarm" class="valid"> Alarme désactivée</p>
+
+
+  <div class="confirm">
+    <button type="button" (click)="stopSiren()" class="btn btn-danger btn-sm">Couper l'alarme</button>
+    <button type="button" (click)="turnOffAlarmSystem()" class="btn btn-warning btn-sm">Désactiver la sécurité</button>
+    <button type="button" (click)="confirm()" id="confirm" class="btn btn-success btn-sm">Activer la sécurité</button>
+</div>

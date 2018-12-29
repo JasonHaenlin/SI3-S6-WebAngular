@@ -1,0 +1,14 @@
+.title {
+  /* color: rgb(147, 101, 199);*/
+  color: rgb(34, 74, 204);
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.card_size {
+  width: 100%;
+  height: 7em;
+  background: whitesmoke;
+  margin-right: 10%;
+}

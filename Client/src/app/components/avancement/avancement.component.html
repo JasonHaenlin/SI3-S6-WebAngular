@@ -1,0 +1,43 @@
+<div class="etat">
+
+  <div class="annule">
+    <div title="l'incident a été annulé" class="row" *ngIf="etat=='Annulé'">
+      <button mat-button disabled style="color: red">
+        <mat-icon>cancel</mat-icon> &nbsp; ANNULE
+      </button>
+    </div>
+  </div>
+
+  <div class="enCours">
+    <div title="Mise à jour vers Terminé" class="row" *ngIf="etat=='En cours'">
+      <button mat-button (click)="notifyParentUpdateGravity()">
+        <mat-icon>sync</mat-icon> &nbsp; EN COURS
+      </button>
+    </div>
+  </div>
+
+  <div class="enAttente">
+    <div title="Mise à jour vers Pris en compte" class="row" *ngIf="etat=='En attente'">
+      <button mat-button (click)="notifyParentUpdateGravity()">
+        <mat-icon>pause</mat-icon> &nbsp; EN ATTENTE
+      </button>
+    </div>
+  </div>
+
+  <div class="prisEnCompte">
+    <div title="Mise à jour vers En cours" class="row" *ngIf="etat=='Pris en compte'">
+      <button mat-button (click)="notifyParentUpdateGravity()">
+        <mat-icon>done</mat-icon>
+        &nbsp;PRIS EN COMPTE
+      </button>
+    </div>
+  </div>
+
+  <div class="termine">
+    <div title="L'incident est Terminé" class="row" *ngIf="etat=='Terminé'">
+      <button mat-button disabled style="color: blue">
+        <mat-icon>check</mat-icon> &nbsp; TERMINE
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="modal-header">
+  <h2 class="modal-title">Incident</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-container">
+  <div class="modal-body">
+    <div class="container">
+
+      <div class="row">
+        <div class="col">
+          <h5>Description</h5>
+          <p class="font-p">
+            {{incident.declaration}}
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h5>Auteur</h5>
+          <p class="font-p">
+            {{incident.nom}}
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h5>Date </h5>
+          <p class="font-p">
+            {{incident.date | date : "d MMM y h:mm:a"}}
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 criticite">
+          <h5>Criticité</h5>
+          <app-gravity-gauge ampleur={{incident.ampleur}}></app-gravity-gauge>
+        </div>
+        <div class="col-md-6">
+          <h5>Lieu</h5>
+          <p class="font-p">
+            {{incident.lieu}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <mat-list role="list">
+      <div class="container-fluid">
+        <div class="list-notification">
+          <app-notification-list incidentId={{incident.id_incident}} ></app-notification-list>
+        </div>
+      </div>
+    </mat-list>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Fermer</button>
+	<button type="button" class="btn btn-outline-dark" (click)="modifier()">Modifier</button>
+	<button type="button" class="btn btn-outline-dark" (click)="notifier()">Notifier</button>
+
+
+  </div>
+</div>

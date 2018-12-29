@@ -1,0 +1,13 @@
+.info { 
+    color: rgb(78, 78, 78); 
+    margin-top: 15px; 
+    margin-left:15px; 
+    font-size: 20px; 
+ 
+} 
+.back { 
+    float: right; 
+    margin-right:15px; 
+    font-size: 15px; 
+    font-weight: 600; 
+} 

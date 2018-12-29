@@ -1,0 +1,79 @@
+<mat-toolbar class="fixed-top" color="primary" style="min-height:60px;" role="header">
+  <span>
+    <a class="navbar-brand" href="#">MyHouse</a>
+  </span>
+  <span class="spacer"></span>
+
+
+  <div id="nav_bar_mobile">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary btn-outline-light" id="dropdownBasic1" style="margin-right: 50%;" ngbDropdownToggle>Menu</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" (click)="home()">Visualiser</button>
+        <button class="dropdown-item" (click)="famillySettings()">Parametres</button>
+        <button class="dropdown-item" (click)="smarthome()">Maison</button>
+        <button class="dropdown-item" [routerLink]="" (click)=" logOutSession() ">Deconnexion</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="nav_bar_pc">
+    <div class="right row" *ngIf="router.url == '/iotpanel'">
+      <button mat-button class="hide navbar-deconnexion" (click)="home()">
+        <mat-icon aria-label="visualiser">visibility</mat-icon>
+        <div class="show_label"> VISUALISEUR </div>
+      </button>
+      <button mat-button disabled class="hide navbar-deconnexion" (click)="smarthome()">
+        <mat-icon aria-label="visualiser">home</mat-icon>
+        <div class="show_label">MAISON </div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" (click)="famillySettings()">
+        <mat-icon aria-label="visualiser">settings</mat-icon>
+        <div class="show_label">PARAMETRES </div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" [routerLink]="" (click)=" logOutSession() ">
+        <mat-icon aria-label="visualiser">exit_to_app</mat-icon>
+        <div class="show_label">DECONNEXION </div>
+      </button>
+    </div>
+
+    <div class="right row" *ngIf="router.url == '/settings'">
+      <button mat-button class="hide navbar-deconnexion" (click)="home()">
+        <mat-icon aria-label="visualiser">visibility</mat-icon>
+        <div class="show_label">VISUALISEUR </div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" (click)="smarthome()">
+        <mat-icon aria-label="visualiser">home</mat-icon>
+        <div class="show_label"> MAISON</div>
+      </button>
+      <button mat-button disabled class="hide navbar-deconnexion" (click)="famillySettings()">
+        <mat-icon aria-label="visualiser">settings</mat-icon>
+        <div class="show_label"> PARAMETRES</div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" [routerLink]="" (click)=" logOutSession() ">
+        <mat-icon aria-label="visualiser">exit_to_app</mat-icon>
+        <div class="show_label">DECONNEXION </div>
+      </button>
+    </div>
+
+    <div class="right row" *ngIf="router.url == '/visualiser'">
+      <button mat-button disabled class="hide navbar-deconnexion" (click)="home()">
+        <mat-icon aria-label="visualiser">visibility</mat-icon>
+        <div class="show_label"> VISUALISEUR</div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" (click)="smarthome()">
+        <mat-icon aria-label="visualiser">home</mat-icon>
+        <div class="show_label"> MAISON</div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" (click)="famillySettings()">
+        <mat-icon aria-label="visualiser">settings</mat-icon>
+        <div class="show_label">PARAMETRES </div>
+      </button>
+      <button mat-button class="hide navbar-deconnexion" [routerLink]="" (click)=" logOutSession() ">
+        <mat-icon aria-label="visualiser">exit_to_app</mat-icon>
+        <div class="show_label">DECONNEXION </div>
+      </button>
+    </div>
+  </div>
+
+</mat-toolbar>

@@ -1,0 +1,6 @@
+<ul class="incident-container">
+  <li [@shrinkOut] *ngFor="let incident of incidentList | orderBy:'date':false | searchPipe :'declaration': terms | searchPipe :'etat': filterState | searchPipe :'ampleur': filterCriticite | searchPipe :'nom' : filterUser">
+    <app-card-incident (removeEvent)="delete($event)" [incident]="incident" [avatar]="image | userMishapPipe : userList : incident.nom">
+    </app-card-incident>
+  </li>
+</ul>

@@ -1,0 +1,41 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  font-size: 20px;
+  transition: ease-in .3s;
+  text-decoration: none;
+}
+
+/*login page */
+.users {
+  overflow: visible;
+  padding-top: 5em;
+  text-align: center;
+}
+
+.user-square {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(127, 31, 190, 0.15);
+  transition: border 0.1s ease-in;
+}
+
+.user-square:hover {
+  border: 3px solid rgb(36, 32, 32);
+}
+
+.profile {
+  display: inline-block;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 84px;
+  min-width: 84px;
+  padding: 0 30px 40px;
+  text-decoration: none;
+  color: rgb(36, 32, 32);
+}
+
+

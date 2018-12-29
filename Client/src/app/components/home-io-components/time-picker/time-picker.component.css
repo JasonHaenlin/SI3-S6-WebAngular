@@ -1,0 +1,24 @@
+.confirm {
+  text-align: right;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.error {
+  font-size: 10px;
+  padding-left: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.valid {
+  font-size: 10px;
+  padding-left: 10px;
+  color: rgb(13, 158, 13);
+  font-weight: bold;
+}
+
+.check {
+  padding-left: 10px;
+  display: block;
+}

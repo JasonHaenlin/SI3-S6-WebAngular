@@ -1,0 +1,19 @@
+<app-sub-nav-bar [subTitle]="subTitle"></app-sub-nav-bar>
+
+<!-- I didn't close the tag to disable the whitespace bettween <li> -->
+<ul class="user-container">
+  <li class="profile" *ngFor="let user of userList | userPipe :'nom': smarthome">
+    <app-card-user (notifyParent)=" onUserDeleted($event) " [user]="user "></app-card-user>
+    <!---->
+    <li class="profile ">
+      <mat-card class="modify-card ">
+        <mat-card-header>
+          <mat-card-title>Ajouter un membre à cette famille !</mat-card-title>
+        </mat-card-header>
+
+        <img mat-card-image src="http://webh.ddns.net/img/avatars/anonym.png " alt="*-* ">
+        <mat-card-actions>
+          <app-user-add (notifyParent)="onModalClose($event) "></app-user-add>
+        </mat-card-actions>
+      </mat-card>
+</ul>

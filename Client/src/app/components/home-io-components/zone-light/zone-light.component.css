@@ -1,0 +1,11 @@
+.title {
+  /* color: rgb(147, 101, 199); */
+  color: rgb(34, 74, 204);
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slide {
+  padding-left: 10px;
+}

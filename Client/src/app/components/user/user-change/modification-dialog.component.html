@@ -1,0 +1,39 @@
+<div class="modal-container">
+  <h2 class="modal-header">Modification de l'utilisateur {{user.nom}}</h2>
+
+  <img mat-card-image class="img" src="http://webh.ddns.net{{userChanged.avatar}}" alt="*-*">
+
+  <div class="selectAvatar">
+    <img *ngFor="let avatar of avatars" mat-card-avatar class="header-image" src="http://webh.ddns.net{{avatar.image_file}}"
+      alt="*-*" (click)="changeAvatar(this.avatar, $event)">
+  </div>
+
+  <div class="modal-body">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput id="newUserName" placeholder="Pseudonyme" [(ngModel)]="userChanged.nom" [ngModelOptions]="{standalone: true}"
+        />
+        <mat-hint>* Champ obligatoire</mat-hint>
+      </mat-form-field>
+
+    </form>
+
+    <mat-checkbox [(ngModel)]="userChanged.admin">Administrateur</mat-checkbox>
+
+    <div *ngIf="userChanged.admin">
+      <mat-form-field class="example-full-width">
+        <input matInput id="password" type="password" placeholder="Mot de passe" [(ngModel)]="newPassword" [ngModelOptions]="{standalone: true}">
+        <mat-hint>* Champ obligatoire</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <p *ngIf="errorName" class="error"> Vous devez entrer un nom !</p>
+    <p *ngIf="errorAvatar" class="error"> Vous devez choisir un avatar !</p>
+    <p *ngIf="errorMdp" class="error"> Vous devez taper un mot de passe !</p>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="confirm()">Confirmer</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Annuler</button>
+    </div>
+  </div>
+</div>

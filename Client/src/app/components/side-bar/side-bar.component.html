@@ -1,0 +1,43 @@
+<div class="sidebar">
+
+  <div class="sidebar-heading">
+    <label class="label">FILTER PAR TITRE</label>
+  </div>
+
+  <div class="search-area search_bar_margin">
+    <input #searchBox class="form-control mr-sm-2" type="search" placeholder="Rechercher ..." (keyup)="onKey($event)" aria-label="Search">
+  </div>
+  <mat-divider></mat-divider>
+  <form>
+    <p class="sidebar-heading">Filtrer par états:</p>
+    <div *ngFor="let incidentState of incidentStates">
+      <div class="search-element">
+        <input type="radio" id="{{incidentState.etat}}" class="etat" name="state" value="incidentState.ampleur" (click)="changedFilterState(incidentState, $event)">
+        <label for="{{incidentState.etat}}">{{incidentState.etat}}</label>
+      </div>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+
+  <form>
+    <p class="sidebar-heading">Filtrer par criticités:</p>
+    <div *ngFor="let criticite of criticites">
+      <div class="search-element">
+        <input type="radio" id="{{criticite.ampleur}}" class="etat" name="urgence" value="criticite" (click)="changedFilterCriticite(criticite, $event)">
+        <label for="{{criticite.ampleur}}">{{criticite.ampleur}}</label>
+      </div>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+
+  <form>
+    <p class="sidebar-heading">Filtrer par utilisateurs:</p>
+    <div *ngFor="let user of users">
+      <div class="search-element">
+        <input type="radio" id="{{user.nom}}" class="etat" name="utilisateur" value="user" (click)="changedFilterUser(user, $event)">
+        <label for="{{user.nom}}">{{user.nom}}</label>
+      </div>
+    </div>
+  </form>
+
+</div>

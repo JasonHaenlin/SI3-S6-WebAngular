@@ -1,0 +1,433 @@
+[{
+		"id": "d87b430c.007d98",
+		"type": "http in",
+		"z": "633f8708.338368",
+		"name": "",
+		"url": "/lightstate",
+		"method": "post",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 150,
+		"y": 200,
+		"wires": [
+			[
+				"99d8d2a9.93597",
+				"a90b9aa8.d5a9a",
+				"add03a32.9df938"
+			]
+		]
+	},
+	{
+		"id": "e99e33ec.51adc8",
+		"type": "comment",
+		"z": "633f8708.338368",
+		"name": "change l'état de la lumière dans une zone                                            ",
+		"info": "",
+		"x": 220,
+		"y": 160,
+		"wires": []
+	},
+	{
+		"id": "99d8d2a9.93597",
+		"type": "http response",
+		"z": "633f8708.338368",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 310,
+		"y": 220,
+		"wires": []
+	},
+	{
+		"id": "a90b9aa8.d5a9a",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "post-lightstate",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1060,
+		"y": 200,
+		"wires": []
+	},
+	{
+		"id": "add03a32.9df938",
+		"type": "link out",
+		"z": "633f8708.338368",
+		"name": "light_in_http",
+		"links": [
+			"8ac4a7cf.5b707"
+		],
+		"x": 475,
+		"y": 180,
+		"wires": []
+	},
+	{
+		"id": "999fac8f.0764c8",
+		"type": "http in",
+		"z": "633f8708.338368",
+		"name": "",
+		"url": "/homezone",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 150,
+		"y": 580,
+		"wires": [
+			[
+				"b1217321.06b7b"
+			]
+		]
+	},
+	{
+		"id": "8faabbd5.7a2f1",
+		"type": "http response",
+		"z": "633f8708.338368",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 630,
+		"y": 600,
+		"wires": []
+	},
+	{
+		"id": "aef8af56.b7e1c",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "homezone-sql-res",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1050,
+		"y": 580,
+		"wires": []
+	},
+	{
+		"id": "f91ad690.7ec6e8",
+		"type": "mysql",
+		"z": "633f8708.338368",
+		"mydb": "25892498.bc4f14",
+		"name": "MYSQL",
+		"x": 500,
+		"y": 580,
+		"wires": [
+			[
+				"aef8af56.b7e1c",
+				"8faabbd5.7a2f1"
+			]
+		]
+	},
+	{
+		"id": "b1217321.06b7b",
+		"type": "function",
+		"z": "633f8708.338368",
+		"name": "PARSE payload",
+		"func": "msg.topic = \"SELECT l.zone, home_zone.description, l.light FROM home_light l INNER JOIN (SELECT zone, max(id) as maxId FROM home_light GROUP BY zone) j ON l.zone = j.zone AND l.id = j.maxId INNER JOIN home_zone ON l.zone = home_zone.zone\";\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 340,
+		"y": 580,
+		"wires": [
+			[
+				"f91ad690.7ec6e8"
+			]
+		]
+	},
+	{
+		"id": "f002bf45.2336d",
+		"type": "http in",
+		"z": "633f8708.338368",
+		"name": "",
+		"url": "/light/all=:state",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 160,
+		"y": 460,
+		"wires": [
+			[
+				"bf49ffcd.8311a",
+				"91b100c3.eb5d08"
+			]
+		]
+	},
+	{
+		"id": "91b100c3.eb5d08",
+		"type": "http response",
+		"z": "633f8708.338368",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 330,
+		"y": 480,
+		"wires": []
+	},
+	{
+		"id": "bf49ffcd.8311a",
+		"type": "template",
+		"z": "633f8708.338368",
+		"name": "",
+		"field": "payload",
+		"fieldType": "msg",
+		"format": "handlebars",
+		"syntax": "mustache",
+		"template": "{{req.params.state}}",
+		"output": "json",
+		"x": 340,
+		"y": 440,
+		"wires": [
+			[
+				"cde6c9b1.4114e",
+				"2d033638.871d1a"
+			]
+		]
+	},
+	{
+		"id": "cde6c9b1.4114e",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "false",
+		"x": 1070,
+		"y": 440,
+		"wires": []
+	},
+	{
+		"id": "2d033638.871d1a",
+		"type": "link out",
+		"z": "633f8708.338368",
+		"name": "light_out_mysql",
+		"links": [
+			"1f6d6205.74c22e"
+		],
+		"x": 475,
+		"y": 480,
+		"wires": []
+	},
+	{
+		"id": "d0f8f013.07f11",
+		"type": "comment",
+		"z": "633f8708.338368",
+		"name": "Activer le mode smartLight",
+		"info": "",
+		"x": 170,
+		"y": 40,
+		"wires": []
+	},
+	{
+		"id": "cbd7e29e.8b2d1",
+		"type": "http in",
+		"z": "633f8708.338368",
+		"name": "",
+		"url": "/smartlight=:state",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 170,
+		"y": 80,
+		"wires": [
+			[
+				"f3fd640a.0dadc8",
+				"d7cd4804.e435d"
+			]
+		]
+	},
+	{
+		"id": "f3fd640a.0dadc8",
+		"type": "template",
+		"z": "633f8708.338368",
+		"name": "",
+		"field": "payload",
+		"fieldType": "msg",
+		"format": "handlebars",
+		"syntax": "mustache",
+		"template": "{{req.params.state}}",
+		"output": "json",
+		"x": 360,
+		"y": 60,
+		"wires": [
+			[
+				"dee05bff.0142e",
+				"44cf7b40.e062b4"
+			]
+		]
+	},
+	{
+		"id": "d7cd4804.e435d",
+		"type": "http response",
+		"z": "633f8708.338368",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 350,
+		"y": 100,
+		"wires": []
+	},
+	{
+		"id": "dee05bff.0142e",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "false",
+		"x": 1070,
+		"y": 60,
+		"wires": []
+	},
+	{
+		"id": "769e714.c7b6e9",
+		"type": "mysql",
+		"z": "633f8708.338368",
+		"mydb": "25892498.bc4f14",
+		"name": "MYSQL",
+		"x": 920,
+		"y": 360,
+		"wires": [
+			[
+				"2838e11b.785b86"
+			]
+		]
+	},
+	{
+		"id": "2838e11b.785b86",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "light-sql-res",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1070,
+		"y": 360,
+		"wires": []
+	},
+	{
+		"id": "a5e3b2bc.55971",
+		"type": "function",
+		"z": "633f8708.338368",
+		"name": "PARSE payload",
+		"func": "msg.topic = \"INSERT INTO home_light (zone,light) VALUES (?,?)\";\nmsg.payload = [msg.payload.zone, msg.payload.light];\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 760,
+		"y": 340,
+		"wires": [
+			[
+				"769e714.c7b6e9",
+				"1ac38e43.217b72"
+			]
+		]
+	},
+	{
+		"id": "a8e62eb.ad931d",
+		"type": "json",
+		"z": "633f8708.338368",
+		"name": "",
+		"property": "payload",
+		"action": "",
+		"pretty": false,
+		"x": 610,
+		"y": 340,
+		"wires": [
+			[
+				"a5e3b2bc.55971"
+			]
+		]
+	},
+	{
+		"id": "1ac38e43.217b72",
+		"type": "debug",
+		"z": "633f8708.338368",
+		"name": "parse-light",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1070,
+		"y": 320,
+		"wires": []
+	},
+	{
+		"id": "7c0d754e.9fec64",
+		"type": "link in",
+		"z": "633f8708.338368",
+		"name": "",
+		"links": [
+			"4e1dd7e3.b797",
+			"1a1c2354.11a655"
+		],
+		"x": 515,
+		"y": 340,
+		"wires": [
+			[
+				"a8e62eb.ad931d"
+			]
+		]
+	},
+	{
+		"id": "44cf7b40.e062b4",
+		"type": "link out",
+		"z": "633f8708.338368",
+		"name": "smartlight_out",
+		"links": [
+			"c21329c6.93f9c8",
+			"777eaf8c.c9485",
+			"c3f12dc7.23d86"
+		],
+		"x": 475,
+		"y": 100,
+		"wires": []
+	},
+	{
+		"id": "92469a44.26b5",
+		"type": "comment",
+		"z": "633f8708.338368",
+		"name": "mise à jour de l'état de la lumière dans la bdd",
+		"info": "",
+		"x": 230,
+		"y": 280,
+		"wires": []
+	},
+	{
+		"id": "60767484.506e64",
+		"type": "comment",
+		"z": "633f8708.338368",
+		"name": "mise à jour de l'état de toutes les lumières ",
+		"info": "",
+		"x": 220,
+		"y": 400,
+		"wires": []
+	},
+	{
+		"id": "dec51e10.ee308",
+		"type": "comment",
+		"z": "633f8708.338368",
+		"name": "récupère l'état des lumières dans toutes les zones",
+		"info": "",
+		"x": 250,
+		"y": 540,
+		"wires": []
+	},
+	{
+		"id": "25892498.bc4f14",
+		"type": "MySQLdatabase",
+		"z": "7f05e41b.e8f3fc",
+		"host": "127.0.0.1",
+		"port": "3306",
+		"db": "ps6_iot",
+		"tz": ""
+	}
+]

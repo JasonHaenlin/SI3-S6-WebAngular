@@ -1,0 +1,6 @@
+<div class="alarm">
+  <p class="title"> Paramètrage de l'alarme </p>
+  <div *ngFor="let a of alarm">
+    <app-time-picker [time]="a"></app-time-picker>
+  </div>
+</div>

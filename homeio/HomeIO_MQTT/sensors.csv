@@ -1,0 +1,330 @@
+Input,0,A - Interrupteur Lumière 1,A,bool,/home/A/Input/bool/Interrupteur_Lumière_1
+Input,1,A - Interrupteur Lumière 2,A,bool,/home/A/Input/bool/Interrupteur_Lumière_2
+Input,2,A - Interrupteur Lumière 3,A,bool,/home/A/Input/bool/Interrupteur_Lumière_3
+Input,3,A - Interrupteur Haut / Bas 1 (Haut),A,bool,/home/A/Input/bool/Interrupteur_Haut_-_Bas_1_(Haut)
+Input,4,A - Interrupteur Haut / Bas 1 (Bas),A,bool,/home/A/Input/bool/Interrupteur_Haut_-_Bas_1_(Bas)
+Input,5,A - Interrupteur Haut / Bas 2 (Haut),A,bool,/home/A/Input/bool/Interrupteur_Haut_-_Bas_2_(Haut)
+Input,6,A - Interrupteur Haut / Bas 2 (Bas),A,bool,/home/A/Input/bool/Interrupteur_Haut_-_Bas_2_(Bas)
+Input,7,A - Variateur de lumière 1 (Haut),A,bool,/home/A/Input/bool/Variateur_de_lumière_1_(Haut)
+Input,8,A - Variateur de lumière 1 (Bas),A,bool,/home/A/Input/bool/Variateur_de_lumière_1_(Bas)
+Input,9,A - Variateur de lumière 2 (Haut),A,bool,/home/A/Input/bool/Variateur_de_lumière_2_(Haut)
+Input,10,A - Variateur de lumière 2 (Bas),A,bool,/home/A/Input/bool/Variateur_de_lumière_2_(Bas)
+Input,11,A - Variateur de lumière 3 (Haut),A,bool,/home/A/Input/bool/Variateur_de_lumière_3_(Haut)
+Input,12,A - Variateur de lumière 3 (Bas),A,bool,/home/A/Input/bool/Variateur_de_lumière_3_(Bas)
+Input,13,A - Détecteur porte fermée 1,A,bool,/home/A/Input/bool/Détecteur_porte_fermée_1
+Input,14,A - Détecteur porte fermée 2,A,bool,/home/A/Input/bool/Détecteur_porte_fermée_2
+Input,15,A - Détecteur de mouvement,A,bool,/home/A/Input/bool/Détecteur_de_mouvement
+Input,16,A - Capteur de luminosité,A,bool,/home/A/Input/bool/Capteur_de_luminosité
+Input,17,A - Détecteur de fumée,A,bool,/home/A/Input/bool/Détecteur_de_fumée
+Input,27,B - Interrupteur Lumière 1,B,bool,/home/B/Input/bool/Interrupteur_Lumière_1
+Input,28,B - Interrupteur Lumière 2,B,bool,/home/B/Input/bool/Interrupteur_Lumière_2
+Input,29,B - Détecteur de mouvement,B,bool,/home/B/Input/bool/Détecteur_de_mouvement
+Input,39,C - Interrupteur Lumière,C,bool,/home/C/Input/bool/Interrupteur_Lumière
+Input,49,D - Interrupteur Haut / Bas (Haut),D,bool,/home/D/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,50,D - Interrupteur Haut / Bas (Bas),D,bool,/home/D/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,51,D - Variateur de lumière 1 (Haut),D,bool,/home/D/Input/bool/Variateur_de_lumière_1_(Haut)
+Input,52,D - Variateur de lumière 1 (Bas),D,bool,/home/D/Input/bool/Variateur_de_lumière_1_(Bas)
+Input,53,D - Variateur de lumière 2 (Haut),D,bool,/home/D/Input/bool/Variateur_de_lumière_2_(Haut)
+Input,54,D - Variateur de lumière 2 (Bas),D,bool,/home/D/Input/bool/Variateur_de_lumière_2_(Bas)
+Input,55,D - Détecteur porte fermée,D,bool,/home/D/Input/bool/Détecteur_porte_fermée
+Input,56,D - Détecteur de mouvement,D,bool,/home/D/Input/bool/Détecteur_de_mouvement
+Input,57,D - Capteur de luminosité,D,bool,/home/D/Input/bool/Capteur_de_luminosité
+Input,67,E - Interrupteur Lumière 1,E,bool,/home/E/Input/bool/Interrupteur_Lumière_1
+Input,68,E - Interrupteur Lumière 2,E,bool,/home/E/Input/bool/Interrupteur_Lumière_2
+Input,69,E - Interrupteur Lumière 3,E,bool,/home/E/Input/bool/Interrupteur_Lumière_3
+Input,70,E - Interrupteur Lumière 4,E,bool,/home/E/Input/bool/Interrupteur_Lumière_4
+Input,71,E - Interrupteur Lumière 5,E,bool,/home/E/Input/bool/Interrupteur_Lumière_5
+Input,72,E - Interrupteur Haut / Bas (Haut),E,bool,/home/E/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,73,E - Interrupteur Haut / Bas (Bas),E,bool,/home/E/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,74,E - Variateur de lumière 1 (Haut),E,bool,/home/E/Input/bool/Variateur_de_lumière_1_(Haut)
+Input,75,E - Variateur de lumière 1 (Bas),E,bool,/home/E/Input/bool/Variateur_de_lumière_1_(Bas)
+Input,76,E - Variateur de lumière 2 (Haut),E,bool,/home/E/Input/bool/Variateur_de_lumière_2_(Haut)
+Input,77,E - Variateur de lumière 2 (Bas),E,bool,/home/E/Input/bool/Variateur_de_lumière_2_(Bas)
+Input,78,E - Détecteur porte fermée 1,E,bool,/home/E/Input/bool/Détecteur_porte_fermée_1
+Input,79,E - Détecteur porte fermée 2,E,bool,/home/E/Input/bool/Détecteur_porte_fermée_2
+Input,80,E - Détecteur de mouvement,E,bool,/home/E/Input/bool/Détecteur_de_mouvement
+Input,81,E - Capteur de luminosité,E,bool,/home/E/Input/bool/Capteur_de_luminosité
+Input,82,E - Alarme Digicode (Activée),E,bool,/home/E/Input/bool/Alarme_Digicode_(Activée)
+Input,92,F - Interrupteur Lumière 1,F,bool,/home/F/Input/bool/Interrupteur_Lumière_1
+Input,93,F - Interrupteur Lumière 2,F,bool,/home/F/Input/bool/Interrupteur_Lumière_2
+Input,94,F - Interrupteur Haut / Bas 1 (Haut),F,bool,/home/F/Input/bool/Interrupteur_Haut_-_Bas_1_(Haut)
+Input,95,F - Interrupteur Haut / Bas 1 (Bas),F,bool,/home/F/Input/bool/Interrupteur_Haut_-_Bas_1_(Bas)
+Input,96,F - Interrupteur Haut / Bas 2 (Haut),F,bool,/home/F/Input/bool/Interrupteur_Haut_-_Bas_2_(Haut)
+Input,97,F - Interrupteur Haut / Bas 2 (Bas),F,bool,/home/F/Input/bool/Interrupteur_Haut_-_Bas_2_(Bas)
+Input,98,F - Détecteur de mouvement,F,bool,/home/F/Input/bool/Détecteur_de_mouvement
+Input,99,F - Capteur de luminosité,F,bool,/home/F/Input/bool/Capteur_de_luminosité
+Input,100,F - Porte de Garage (Ouverte),F,bool,/home/F/Input/bool/Porte_de_Garage_(Ouverte)
+Input,101,F - Porte de Garage (Fermée),F,bool,/home/F/Input/bool/Porte_de_Garage_(Fermée)
+Input,102,F - Porte de Garage (Infrarouge),F,bool,/home/F/Input/bool/Porte_de_Garage_(Infrarouge)
+Input,112,G - Interrupteur Lumière 1,G,bool,/home/G/Input/bool/Interrupteur_Lumière_1
+Input,113,G - Interrupteur Lumière 2,G,bool,/home/G/Input/bool/Interrupteur_Lumière_2
+Input,114,G - Interrupteur Lumière 3,G,bool,/home/G/Input/bool/Interrupteur_Lumière_3
+Input,115,G - Interrupteur Lumière 4,G,bool,/home/G/Input/bool/Interrupteur_Lumière_4
+Input,116,G - Interrupteur Lumière 5,G,bool,/home/G/Input/bool/Interrupteur_Lumière_5
+Input,117,G - Interrupteur Haut / Bas (Haut),G,bool,/home/G/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,118,G - Interrupteur Haut / Bas (Bas),G,bool,/home/G/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,119,G - Détecteur de mouvement,G,bool,/home/G/Input/bool/Détecteur_de_mouvement
+Input,120,G - Détecteur de fumée,G,bool,/home/G/Input/bool/Détecteur_de_fumée
+Input,130,H - Interrupteur Lumière 1,H,bool,/home/H/Input/bool/Interrupteur_Lumière_1
+Input,131,H - Interrupteur Lumière 2,H,bool,/home/H/Input/bool/Interrupteur_Lumière_2
+Input,132,H - Interrupteur Haut / Bas (Haut),H,bool,/home/H/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,133,H - Interrupteur Haut / Bas (Bas),H,bool,/home/H/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,134,H - Variateur de lumière (Haut),H,bool,/home/H/Input/bool/Variateur_de_lumière_(Haut)
+Input,135,H - Variateur de lumière (Bas),H,bool,/home/H/Input/bool/Variateur_de_lumière_(Bas)
+Input,136,H - Détecteur porte fermée 1,H,bool,/home/H/Input/bool/Détecteur_porte_fermée_1
+Input,137,H - Détecteur porte fermée 2,H,bool,/home/H/Input/bool/Détecteur_porte_fermée_2
+Input,138,H - Détecteur de mouvement,H,bool,/home/H/Input/bool/Détecteur_de_mouvement
+Input,139,H - Capteur de luminosité,H,bool,/home/H/Input/bool/Capteur_de_luminosité
+Input,140,H - Détecteur de fumée,H,bool,/home/H/Input/bool/Détecteur_de_fumée
+Input,150,I - Interrupteur Lumière,I,bool,/home/I/Input/bool/Interrupteur_Lumière
+Input,151,I - Variateur de lumière (Haut),I,bool,/home/I/Input/bool/Variateur_de_lumière_(Haut)
+Input,152,I - Variateur de lumière (Bas),I,bool,/home/I/Input/bool/Variateur_de_lumière_(Bas)
+Input,153,I - Détecteur de mouvement,I,bool,/home/I/Input/bool/Détecteur_de_mouvement
+Input,163,J - Interrupteur Lumière 1,J,bool,/home/J/Input/bool/Interrupteur_Lumière_1
+Input,164,J - Interrupteur Lumière 2,J,bool,/home/J/Input/bool/Interrupteur_Lumière_2
+Input,165,J - Interrupteur Haut / Bas (Haut),J,bool,/home/J/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,166,J - Interrupteur Haut / Bas (Bas),J,bool,/home/J/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,167,J - Variateur de lumière (Haut),J,bool,/home/J/Input/bool/Variateur_de_lumière_(Haut)
+Input,168,J - Variateur de lumière (Bas),J,bool,/home/J/Input/bool/Variateur_de_lumière_(Bas)
+Input,169,J - Détecteur porte fermée 1,J,bool,/home/J/Input/bool/Détecteur_porte_fermée_1
+Input,170,J - Détecteur porte fermée 2,J,bool,/home/J/Input/bool/Détecteur_porte_fermée_2
+Input,171,J - Détecteur de mouvement,J,bool,/home/J/Input/bool/Détecteur_de_mouvement
+Input,172,J - Capteur de luminosité,J,bool,/home/J/Input/bool/Capteur_de_luminosité
+Input,173,J - Détecteur de fumée,J,bool,/home/J/Input/bool/Détecteur_de_fumée
+Input,183,K - Variateur de lumière (Haut),K,bool,/home/K/Input/bool/Variateur_de_lumière_(Haut)
+Input,184,K - Variateur de lumière (Bas),K,bool,/home/K/Input/bool/Variateur_de_lumière_(Bas)
+Input,185,K - Détecteur de mouvement,K,bool,/home/K/Input/bool/Détecteur_de_mouvement
+Input,195,L - Interrupteur Lumière 1,L,bool,/home/L/Input/bool/Interrupteur_Lumière_1
+Input,196,L - Interrupteur Lumière 2,L,bool,/home/L/Input/bool/Interrupteur_Lumière_2
+Input,197,L - Interrupteur Haut / Bas (Haut),L,bool,/home/L/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,198,L - Interrupteur Haut / Bas (Bas),L,bool,/home/L/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,199,L - Variateur de lumière 1 (Haut),L,bool,/home/L/Input/bool/Variateur_de_lumière_1_(Haut)
+Input,200,L - Variateur de lumière 1 (Bas),L,bool,/home/L/Input/bool/Variateur_de_lumière_1_(Bas)
+Input,201,L - Variateur de lumière 2 (Haut),L,bool,/home/L/Input/bool/Variateur_de_lumière_2_(Haut)
+Input,202,L - Variateur de lumière 2 (Bas),L,bool,/home/L/Input/bool/Variateur_de_lumière_2_(Bas)
+Input,203,L - Détecteur porte fermée 1,L,bool,/home/L/Input/bool/Détecteur_porte_fermée_1
+Input,204,L - Détecteur porte fermée 2,L,bool,/home/L/Input/bool/Détecteur_porte_fermée_2
+Input,205,L - Détecteur de mouvement,L,bool,/home/L/Input/bool/Détecteur_de_mouvement
+Input,206,L - Capteur de luminosité,L,bool,/home/L/Input/bool/Capteur_de_luminosité
+Input,207,L - Détecteur de fumée,L,bool,/home/L/Input/bool/Détecteur_de_fumée
+Input,217,M - Interrupteur Lumière,M,bool,/home/M/Input/bool/Interrupteur_Lumière
+Input,218,M - Interrupteur Haut / Bas (Haut),M,bool,/home/M/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,219,M - Interrupteur Haut / Bas (Bas),M,bool,/home/M/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,220,M - Détecteur porte fermée 1,M,bool,/home/M/Input/bool/Détecteur_porte_fermée_1
+Input,221,M - Détecteur porte fermée 2,M,bool,/home/M/Input/bool/Détecteur_porte_fermée_2
+Input,222,M - Détecteur de mouvement,M,bool,/home/M/Input/bool/Détecteur_de_mouvement
+Input,223,M - Capteur de luminosité,M,bool,/home/M/Input/bool/Capteur_de_luminosité
+Input,233,N - Interrupteur Lumière 1,N,bool,/home/N/Input/bool/Interrupteur_Lumière_1
+Input,234,N - Interrupteur Lumière 2,N,bool,/home/N/Input/bool/Interrupteur_Lumière_2
+Input,235,N - Interrupteur Lumière 3,N,bool,/home/N/Input/bool/Interrupteur_Lumière_3
+Input,236,N - Variateur de lumière 1 (Haut),N,bool,/home/N/Input/bool/Variateur_de_lumière_1_(Haut)
+Input,237,N - Variateur de lumière 1 (Bas),N,bool,/home/N/Input/bool/Variateur_de_lumière_1_(Bas)
+Input,238,N - Variateur de lumière 2 (Haut),N,bool,/home/N/Input/bool/Variateur_de_lumière_2_(Haut)
+Input,239,N - Variateur de lumière 2 (Bas),N,bool,/home/N/Input/bool/Variateur_de_lumière_2_(Bas)
+Input,240,N - Variateur de lumière 3 (Haut),N,bool,/home/N/Input/bool/Variateur_de_lumière_3_(Haut)
+Input,241,N - Variateur de lumière 3 (Bas),N,bool,/home/N/Input/bool/Variateur_de_lumière_3_(Bas)
+Input,242,N - Interrupteur Haut / Bas (Haut),N,bool,/home/N/Input/bool/Interrupteur_Haut_-_Bas_(Haut)
+Input,243,N - Interrupteur Haut / Bas (Bas),N,bool,/home/N/Input/bool/Interrupteur_Haut_-_Bas_(Bas)
+Input,244,N - Détecteur porte fermée 1,N,bool,/home/N/Input/bool/Détecteur_porte_fermée_1
+Input,245,N - Détecteur porte fermée 2,N,bool,/home/N/Input/bool/Détecteur_porte_fermée_2
+Input,246,N - Détecteur de mouvement,N,bool,/home/N/Input/bool/Détecteur_de_mouvement
+Input,247,N - Capteur de luminosité,N,bool,/home/N/Input/bool/Capteur_de_luminosité
+Input,248,N - Détecteur de fumée,N,bool,/home/N/Input/bool/Détecteur_de_fumée
+Input,258,O - Détecteur de mouvement,O,bool,/home/O/Input/bool/Détecteur_de_mouvement
+Input,259,O - Capteur de luminosité,O,bool,/home/O/Input/bool/Capteur_de_luminosité
+Input,260,O - Portail (Ouvert),O,bool,/home/O/Input/bool/Portail_(Ouvert)
+Input,261,O - Portail (Fermé),O,bool,/home/O/Input/bool/Portail_(Fermé)
+Input,262,O - Portail (Infrarouge 1),O,bool,/home/O/Input/bool/Portail_(Infrarouge_1)
+Input,263,O - Portail (Infrarouge 2),O,bool,/home/O/Input/bool/Portail_(Infrarouge_2)
+Input,264,O - Portail (Infrarouge 3),O,bool,/home/O/Input/bool/Portail_(Infrarouge_3)
+Input,0,A - Capteur de luminosité (Analogique),A,float,/home/A/Input/float/Capteur_de_luminosité_(Analogique)
+Input,1,A - Thermostat (Température pièce),A,float,/home/A/Input/float/Thermostat_(Température_pièce)
+Input,2,A - Thermostat (Point de consigne),A,float,/home/A/Input/float/Thermostat_(Point_de_consigne)
+Input,3,A - Store enrouleur 1 (Ouverture),A,float,/home/A/Input/float/Store_enrouleur_1_(Ouverture)
+Input,4,A - Store enrouleur 2 (Ouverture),A,float,/home/A/Input/float/Store_enrouleur_2_(Ouverture)
+Input,5,A - Store enrouleur 3 (Ouverture),A,float,/home/A/Input/float/Store_enrouleur_3_(Ouverture)
+Input,6,A - Store enrouleur 4 (Ouverture),A,float,/home/A/Input/float/Store_enrouleur_4_(Ouverture)
+Input,12,D - Capteur de luminosité (Analogique),D,float,/home/D/Input/float/Capteur_de_luminosité_(Analogique)
+Input,13,D - Thermostat (Température pièce),D,float,/home/D/Input/float/Thermostat_(Température_pièce)
+Input,14,D - Thermostat (Point de consigne),D,float,/home/D/Input/float/Thermostat_(Point_de_consigne)
+Input,15,D - Store enrouleur (Ouverture),D,float,/home/D/Input/float/Store_enrouleur_(Ouverture)
+Input,24,E - Capteur de luminosité (Analogique),E,float,/home/E/Input/float/Capteur_de_luminosité_(Analogique)
+Input,25,E - Thermostat (Température pièce),E,float,/home/E/Input/float/Thermostat_(Température_pièce)
+Input,26,E - Thermostat (Point de consigne),E,float,/home/E/Input/float/Thermostat_(Point_de_consigne)
+Input,27,E - Store enrouleur (Ouverture),E,float,/home/E/Input/float/Store_enrouleur_(Ouverture)
+Input,36,F - Capteur de luminosité (Analogique),F,float,/home/F/Input/float/Capteur_de_luminosité_(Analogique)
+Input,37,F - Store enrouleur (Ouverture),F,float,/home/F/Input/float/Store_enrouleur_(Ouverture)
+Input,46,G - Thermostat (Température pièce),G,float,/home/G/Input/float/Thermostat_(Température_pièce)
+Input,47,G - Thermostat (Point de consigne),G,float,/home/G/Input/float/Thermostat_(Point_de_consigne)
+Input,48,G - Store enrouleur (Ouverture),G,float,/home/G/Input/float/Store_enrouleur_(Ouverture)
+Input,57,H - Capteur de luminosité (Analogique),H,float,/home/H/Input/float/Capteur_de_luminosité_(Analogique)
+Input,58,H - Thermostat (Température pièce),H,float,/home/H/Input/float/Thermostat_(Température_pièce)
+Input,59,H - Thermostat (Point de consigne),H,float,/home/H/Input/float/Thermostat_(Point_de_consigne)
+Input,60,H - Store enrouleur (Ouverture),H,float,/home/H/Input/float/Store_enrouleur_(Ouverture)
+Input,69,I - Thermostat (Température pièce),I,float,/home/I/Input/float/Thermostat_(Température_pièce)
+Input,70,I - Thermostat (Point de consigne),I,float,/home/I/Input/float/Thermostat_(Point_de_consigne)
+Input,80,J - Capteur de luminosité (Analogique),J,float,/home/J/Input/float/Capteur_de_luminosité_(Analogique)
+Input,81,J - Thermostat (Température pièce),J,float,/home/J/Input/float/Thermostat_(Température_pièce)
+Input,82,J - Thermostat (Point de consigne),J,float,/home/J/Input/float/Thermostat_(Point_de_consigne)
+Input,83,J - Store enrouleur (Ouverture),J,float,/home/J/Input/float/Store_enrouleur_(Ouverture)
+Input,92,K - Thermostat (Température pièce),K,float,/home/K/Input/float/Thermostat_(Température_pièce)
+Input,93,K - Thermostat (Point de consigne),K,float,/home/K/Input/float/Thermostat_(Point_de_consigne)
+Input,103,L - Capteur de luminosité (Analogique),L,float,/home/L/Input/float/Capteur_de_luminosité_(Analogique)
+Input,104,L - Thermostat (Température pièce),L,float,/home/L/Input/float/Thermostat_(Température_pièce)
+Input,105,L - Thermostat (Point de consigne),L,float,/home/L/Input/float/Thermostat_(Point_de_consigne)
+Input,106,L - Store enrouleur (Ouverture),L,float,/home/L/Input/float/Store_enrouleur_(Ouverture)
+Input,115,M - Capteur de luminosité (Analogique),M,float,/home/M/Input/float/Capteur_de_luminosité_(Analogique)
+Input,116,M - Thermostat (Température pièce),M,float,/home/M/Input/float/Thermostat_(Température_pièce)
+Input,117,M - Thermostat (Point de consigne),M,float,/home/M/Input/float/Thermostat_(Point_de_consigne)
+Input,118,M - Store enrouleur (Ouverture),M,float,/home/M/Input/float/Store_enrouleur_(Ouverture)
+Input,127,N - Capteur de luminosité (Analogique),N,float,/home/N/Input/float/Capteur_de_luminosité_(Analogique)
+Input,128,N - Thermostat (Température pièce),N,float,/home/N/Input/float/Thermostat_(Température_pièce)
+Input,129,N - Thermostat (Point de consigne),N,float,/home/N/Input/float/Thermostat_(Point_de_consigne)
+Input,130,N - Store enrouleur (Ouverture),N,float,/home/N/Input/float/Store_enrouleur_(Ouverture)
+Input,139,O - Capteur de luminosité (Analogique),O,float,/home/O/Input/float/Capteur_de_luminosité_(Analogique)
+Input,0,Date et heure,general,DateTime,/home/general/Input/DateTime/Date_et_heure
+Output,0,A - Lumières,A,bool,/home/A/Output/bool/Lumières
+Output,1,A - Store enrouleur 1 (Ouvrir),A,bool,/home/A/Output/bool/Store_enrouleur_1_(Ouvrir)
+Output,2,A - Store enrouleur 1 (Fermer),A,bool,/home/A/Output/bool/Store_enrouleur_1_(Fermer)
+Output,3,A - Store enrouleur 2 (Ouvrir),A,bool,/home/A/Output/bool/Store_enrouleur_2_(Ouvrir)
+Output,4,A - Store enrouleur 2 (Fermer),A,bool,/home/A/Output/bool/Store_enrouleur_2_(Fermer)
+Output,5,A - Store enrouleur 3 (Ouvrir),A,bool,/home/A/Output/bool/Store_enrouleur_3_(Ouvrir)
+Output,6,A - Store enrouleur 3 (Fermer),A,bool,/home/A/Output/bool/Store_enrouleur_3_(Fermer)
+Output,7,A - Store enrouleur 4 (Ouvrir),A,bool,/home/A/Output/bool/Store_enrouleur_4_(Ouvrir)
+Output,8,A - Store enrouleur 4 (Fermer),A,bool,/home/A/Output/bool/Store_enrouleur_4_(Fermer)
+Output,9,A - Radiateur,A,bool,/home/A/Output/bool/Radiateur
+Output,19,B - Lumières 1,B,bool,/home/B/Output/bool/Lumières_1
+Output,20,B - Lumières 2,B,bool,/home/B/Output/bool/Lumières_2
+Output,30,C - Lumières,C,bool,/home/C/Output/bool/Lumières
+Output,40,D - Lumières 1,D,bool,/home/D/Output/bool/Lumières_1
+Output,41,D - Lumières 2,D,bool,/home/D/Output/bool/Lumières_2
+Output,42,D - Store enrouleur (Ouvrir),D,bool,/home/D/Output/bool/Store_enrouleur_(Ouvrir)
+Output,43,D - Store enrouleur (Fermer),D,bool,/home/D/Output/bool/Store_enrouleur_(Fermer)
+Output,44,D - Radiateur,D,bool,/home/D/Output/bool/Radiateur
+Output,54,E - Lumières,E,bool,/home/E/Output/bool/Lumières
+Output,55,E - Store enrouleur (Ouvrir),E,bool,/home/E/Output/bool/Store_enrouleur_(Ouvrir)
+Output,56,E - Store enrouleur (Fermer),E,bool,/home/E/Output/bool/Store_enrouleur_(Fermer)
+Output,57,E - Radiateur,E,bool,/home/E/Output/bool/Radiateur
+Output,58,E - Sirène,E,bool,/home/E/Output/bool/Sirène
+Output,59,E - Alarme Digicode (Activer),E,bool,/home/E/Output/bool/Alarme_Digicode_(Activer)
+Output,60,E - Alarme Digicode (Désactiver),E,bool,/home/E/Output/bool/Alarme_Digicode_(Désactiver)
+Output,68,F - Lumières 1,F,bool,/home/F/Output/bool/Lumières_1
+Output,69,F - Lumières 2,F,bool,/home/F/Output/bool/Lumières_2
+Output,70,F - Store enrouleur (Ouvrir),F,bool,/home/F/Output/bool/Store_enrouleur_(Ouvrir)
+Output,71,F - Store enrouleur (Fermer),F,bool,/home/F/Output/bool/Store_enrouleur_(Fermer)
+Output,72,F - Porte de Garage (Ouvrir),F,bool,/home/F/Output/bool/Porte_de_Garage_(Ouvrir)
+Output,73,F - Porte de Garage (Fermer),F,bool,/home/F/Output/bool/Porte_de_Garage_(Fermer)
+Output,83,G - Lumières,G,bool,/home/G/Output/bool/Lumières
+Output,84,G - Store enrouleur (Ouvrir),G,bool,/home/G/Output/bool/Store_enrouleur_(Ouvrir)
+Output,85,G - Store enrouleur (Fermer),G,bool,/home/G/Output/bool/Store_enrouleur_(Fermer)
+Output,86,G - Radiateur 1,G,bool,/home/G/Output/bool/Radiateur_1
+Output,87,G - Radiateur 2,G,bool,/home/G/Output/bool/Radiateur_2
+Output,97,H - Lumières,H,bool,/home/H/Output/bool/Lumières
+Output,98,H - Store enrouleur (Ouvrir),H,bool,/home/H/Output/bool/Store_enrouleur_(Ouvrir)
+Output,99,H - Store enrouleur (Fermer),H,bool,/home/H/Output/bool/Store_enrouleur_(Fermer)
+Output,100,H - Radiateur,H,bool,/home/H/Output/bool/Radiateur
+Output,110,I - Lumières 1,I,bool,/home/I/Output/bool/Lumières_1
+Output,111,I - Lumières 2,I,bool,/home/I/Output/bool/Lumières_2
+Output,112,I - Radiateur,I,bool,/home/I/Output/bool/Radiateur
+Output,122,J - Lumières,J,bool,/home/J/Output/bool/Lumières
+Output,123,J - Store enrouleur (Ouvrir),J,bool,/home/J/Output/bool/Store_enrouleur_(Ouvrir)
+Output,124,J - Store enrouleur (Fermer),J,bool,/home/J/Output/bool/Store_enrouleur_(Fermer)
+Output,125,J - Radiateur,J,bool,/home/J/Output/bool/Radiateur
+Output,135,K - Lumières,K,bool,/home/K/Output/bool/Lumières
+Output,136,K - Radiateur,K,bool,/home/K/Output/bool/Radiateur
+Output,146,L - Lumières,L,bool,/home/L/Output/bool/Lumières
+Output,147,L - Store enrouleur (Ouvrir),L,bool,/home/L/Output/bool/Store_enrouleur_(Ouvrir)
+Output,148,L - Store enrouleur (Fermer),L,bool,/home/L/Output/bool/Store_enrouleur_(Fermer)
+Output,149,L - Radiateur,L,bool,/home/L/Output/bool/Radiateur
+Output,159,M - Lumières,M,bool,/home/M/Output/bool/Lumières
+Output,160,M - Store enrouleur (Ouvrir),M,bool,/home/M/Output/bool/Store_enrouleur_(Ouvrir)
+Output,161,M - Store enrouleur (Fermer),M,bool,/home/M/Output/bool/Store_enrouleur_(Fermer)
+Output,162,M - Radiateur,M,bool,/home/M/Output/bool/Radiateur
+Output,172,N - Lumières 1,N,bool,/home/N/Output/bool/Lumières_1
+Output,173,N - Lumières 2,N,bool,/home/N/Output/bool/Lumières_2
+Output,174,N - Lumières 3,N,bool,/home/N/Output/bool/Lumières_3
+Output,175,N - Store enrouleur (Ouvrir),N,bool,/home/N/Output/bool/Store_enrouleur_(Ouvrir)
+Output,176,N - Store enrouleur (Fermer),N,bool,/home/N/Output/bool/Store_enrouleur_(Fermer)
+Output,177,N - Radiateur,N,bool,/home/N/Output/bool/Radiateur
+Output,187,O - Porche lumière 1,O,bool,/home/O/Output/bool/Porche_lumière_1
+Output,188,O - Porche lumière 2,O,bool,/home/O/Output/bool/Porche_lumière_2
+Output,189,O - Lumière de piscine,O,bool,/home/O/Output/bool/Lumière_de_piscine
+Output,190,O - Lumière de jardin,O,bool,/home/O/Output/bool/Lumière_de_jardin
+Output,191,O - Entrée lumière,O,bool,/home/O/Output/bool/Entrée_lumière
+Output,192,O - Sirène,O,bool,/home/O/Output/bool/Sirène
+Output,193,O - Portail (Ouvrir),O,bool,/home/O/Output/bool/Portail_(Ouvrir)
+Output,194,O - Portail (Fermer),O,bool,/home/O/Output/bool/Portail_(Fermer)
+Output,0,A - Lumières (Analogique),A,float,/home/A/Output/float/Lumières_(Analogique)
+Output,1,A - Radiateur (Analogique),A,float,/home/A/Output/float/Radiateur_(Analogique)
+Output,11,B - Lumières 1 (Analogique),B,float,/home/B/Output/float/Lumières_1_(Analogique)
+Output,12,B - Lumières 2 (Analogique),B,float,/home/B/Output/float/Lumières_2_(Analogique)
+Output,22,C - Lumières (Analogique),C,float,/home/C/Output/float/Lumières_(Analogique)
+Output,32,D - Lumières 1 (Analogique),D,float,/home/D/Output/float/Lumières_1_(Analogique)
+Output,33,D - Lumières 2 (Analogique),D,float,/home/D/Output/float/Lumières_2_(Analogique)
+Output,34,D - Radiateur (Analogique),D,float,/home/D/Output/float/Radiateur_(Analogique)
+Output,44,E - Lumières (Analogique),E,float,/home/E/Output/float/Lumières_(Analogique)
+Output,45,E - Radiateur (Analogique),E,float,/home/E/Output/float/Radiateur_(Analogique)
+Output,55,F - Lumières 1 (Analogique),F,float,/home/F/Output/float/Lumières_1_(Analogique)
+Output,56,F - Lumières 2 (Analogique),F,float,/home/F/Output/float/Lumières_2_(Analogique)
+Output,66,G - Lumières (Analogique),G,float,/home/G/Output/float/Lumières_(Analogique)
+Output,67,G - Radiateur 1 (Analogique),G,float,/home/G/Output/float/Radiateur_1_(Analogique)
+Output,68,G - Radiateur 2 (Analogique),G,float,/home/G/Output/float/Radiateur_2_(Analogique)
+Output,78,H - Lumières (Analogique),H,float,/home/H/Output/float/Lumières_(Analogique)
+Output,79,H - Radiateur (Analogique),H,float,/home/H/Output/float/Radiateur_(Analogique)
+Output,89,I - Lumières 1 (Analogique),I,float,/home/I/Output/float/Lumières_1_(Analogique)
+Output,90,I - Lumières 2 (Analogique),I,float,/home/I/Output/float/Lumières_2_(Analogique)
+Output,91,I - Radiateur (Analogique),I,float,/home/I/Output/float/Radiateur_(Analogique)
+Output,101,J - Lumières (Analogique),J,float,/home/J/Output/float/Lumières_(Analogique)
+Output,102,J - Radiateur (Analogique),J,float,/home/J/Output/float/Radiateur_(Analogique)
+Output,112,K - Lumières (Analogique),K,float,/home/K/Output/float/Lumières_(Analogique)
+Output,113,K - Radiateur (Analogique),K,float,/home/K/Output/float/Radiateur_(Analogique)
+Output,123,L - Lumières (Analogique),L,float,/home/L/Output/float/Lumières_(Analogique)
+Output,124,L - Radiateur (Analogique),L,float,/home/L/Output/float/Radiateur_(Analogique)
+Output,134,M - Lumières (Analogique),M,float,/home/M/Output/float/Lumières_(Analogique)
+Output,135,M - Radiateur (Analogique),M,float,/home/M/Output/float/Radiateur_(Analogique)
+Output,145,N - Lumières 1 (Analogique),N,float,/home/N/Output/float/Lumières_1_(Analogique)
+Output,146,N - Lumières 2 (Analogique),N,float,/home/N/Output/float/Lumières_2_(Analogique)
+Output,147,N - Lumières 3 (Analogique),N,float,/home/N/Output/float/Lumières_3_(Analogique)
+Output,148,N - Radiateur (Analogique),N,float,/home/N/Output/float/Radiateur_(Analogique)
+Output,158,O - Porche lumière 1 (Analogique),O,float,/home/O/Output/float/Porche_lumière_1_(Analogique)
+Output,159,O - Porche lumière 2 (Analogique),O,float,/home/O/Output/float/Porche_lumière_2_(Analogique)
+Output,160,O - Lumière de piscine (Analogique),O,float,/home/O/Output/float/Lumière_de_piscine_(Analogique)
+Output,161,O - Lumière de jardin (Analogique),O,float,/home/O/Output/float/Lumière_de_jardin_(Analogique)
+Output,162,O - Entrée lumière (Analogique),O,float,/home/O/Output/float/Entrée_lumière_(Analogique)
+Memory,256,Utilisation DLST,general,bool,/home/general/Memory/bool/Utilisation_DLST
+Memory,129,Échelle de temps,general,float,/home/general/Memory/float/Échelle_de_temps
+Memory,130,Latitude,general,float,/home/general/Memory/float/Latitude
+Memory,131,Longitude,general,float,/home/general/Memory/float/Longitude
+Memory,132,Température de l'air [K],general,float,/home/general/Memory/float/Température_de_l'air_[K]
+Memory,133,Humidité relative,general,float,/home/general/Memory/float/Humidité_relative
+Memory,134,Température minimale de l'air [K],general,float,/home/general/Memory/float/Température_minimale_de_l'air_[K]
+Memory,135,Température maximale de l'air [K],general,float,/home/general/Memory/float/Température_maximale_de_l'air_[K]
+Memory,136,Point de rosée [K],general,float,/home/general/Memory/float/Point_de_rosée_[K]
+Memory,137,Vitesse du vent [m / s],general,float,/home/general/Memory/float/Vitesse_du_vent_[m_-_s]
+Memory,138,Nuages,general,float,/home/general/Memory/float/Nuages
+Memory,139,Zénith [°],general,float,/home/general/Memory/float/Zénith_[°]
+Memory,140,Azimut [°],general,float,/home/general/Memory/float/Azimut_[°]
+Memory,141,Puissance Instantanée [w],general,float,/home/general/Memory/float/Puissance_Instantanée_[w]
+Memory,142,Consommation Horaire Énergétique actuelle [J],general,float,/home/general/Memory/float/Consommation_Horaire_Énergétique_actuelle_[J]
+Memory,143,Consommation Énergétique du Jour en cours [J],general,float,/home/general/Memory/float/Consommation_Énergétique_du_Jour_en_cours_[J]
+Memory,144,Consommation Énergétique de la Semaine en cours [J],general,float,/home/general/Memory/float/Consommation_Énergétique_de_la_Semaine_en_cours_[J]
+Memory,145,Consommation Énergétique du Mois en cours [J],general,float,/home/general/Memory/float/Consommation_Énergétique_du_Mois_en_cours_[J]
+Memory,146,Consommation Énergétique de la dernière heure [J],general,float,/home/general/Memory/float/Consommation_Énergétique_de_la_dernière_heure_[J]
+Memory,147,Consommation Énergétique du Dernier jour [J],general,float,/home/general/Memory/float/Consommation_Énergétique_du_Dernier_jour_[J]
+Memory,148,Consommation Énergétique de la semaine dernière [J],general,float,/home/general/Memory/float/Consommation_Énergétique_de_la_semaine_dernière_[J]
+Memory,149,Consommation Énergétique du mois dernier [J],general,float,/home/general/Memory/float/Consommation_Énergétique_du_mois_dernier_[J]
+Memory,150,Température Zone A [K],general,float,/home/general/Memory/float/Température_Zone_A_[K]
+Memory,151,Température Zone B [K],general,float,/home/general/Memory/float/Température_Zone_B_[K]
+Memory,152,Température Zone C [K],general,float,/home/general/Memory/float/Température_Zone_C_[K]
+Memory,153,Température Zone D [K],general,float,/home/general/Memory/float/Température_Zone_D_[K]
+Memory,154,Température Zone E [K],general,float,/home/general/Memory/float/Température_Zone_E_[K]
+Memory,155,Température Zone F [K],general,float,/home/general/Memory/float/Température_Zone_F_[K]
+Memory,156,Température Zone G [K],general,float,/home/general/Memory/float/Température_Zone_G_[K]
+Memory,157,Température Zone H [K],general,float,/home/general/Memory/float/Température_Zone_H_[K]
+Memory,158,Température Zone I [K],general,float,/home/general/Memory/float/Température_Zone_I_[K]
+Memory,159,Température Zone J [K],general,float,/home/general/Memory/float/Température_Zone_J_[K]
+Memory,160,Température Zone K [K],general,float,/home/general/Memory/float/Température_Zone_K_[K]
+Memory,161,Température Zone L [K],general,float,/home/general/Memory/float/Température_Zone_L_[K]
+Memory,162,Température Zone M [K],general,float,/home/general/Memory/float/Température_Zone_M_[K]
+Memory,163,Température Zone N [K],general,float,/home/general/Memory/float/Température_Zone_N_[K]
+Memory,65,Date et heure,general,DateTime,/home/general/Memory/DateTime/Date_et_heure

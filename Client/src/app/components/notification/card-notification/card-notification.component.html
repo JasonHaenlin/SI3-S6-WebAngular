@@ -1,0 +1,36 @@
+<mat-card class="notification">
+	<!-- header -->
+	<div class="card">
+  
+	  <mat-card-content>
+		<!-- <mat-card-title> -->
+		<div class="row">
+		  <div class="col-md-2">
+			{{ auteur }}
+		  </div>
+		  <div class="col-md-1">
+			à :
+		  </div>
+		  <div class="col-md-9" style="color: rgba(56, 56, 182, 0.4);">
+					<li *ngFor="let person of targets" style="display:inline-block; margin-right: 1em;">
+						{{person.nom}}
+					</li>
+			
+		  </div>
+		</div>
+		<!-- </mat-card-title> -->
+	  </mat-card-content>
+  
+	  <!-- content -->
+	  <mat-card-content>
+		<div class="row">
+		  <div class="col-md-10">
+			{{notification.description}}
+		  </div>
+		  
+		</div>
+	  </mat-card-content>
+  
+	</div>
+  </mat-card>
+  

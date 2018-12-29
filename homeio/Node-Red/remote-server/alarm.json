@@ -1,0 +1,835 @@
+[{
+		"id": "337d7495.09e704",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "set la plage horaire et active l'alarme",
+		"info": "",
+		"x": 200,
+		"y": 40,
+		"wires": []
+	},
+	{
+		"id": "9b925607.4e06",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/alarm/timeperiod",
+		"method": "post",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 170,
+		"y": 100,
+		"wires": [
+			[
+				"b13f95f4.91e9e",
+				"713580a4.4291a8",
+				"7913ffc4.25404",
+				"6c103c58.4a1674"
+			]
+		]
+	},
+	{
+		"id": "b13f95f4.91e9e",
+		"type": "http response",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 370,
+		"y": 120,
+		"wires": []
+	},
+	{
+		"id": "713580a4.4291a8",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "PARSE payload",
+		"func": "msg.topic = \"UPDATE `home_alarm_schedule` SET `time_start`=?,`time_end`=? WHERE 1\";\nmsg.payload = [msg.payload.time_start, msg.payload.time_end];\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 380,
+		"y": 80,
+		"wires": [
+			[
+				"c34ea0e6.87cdf8"
+			]
+		]
+	},
+	{
+		"id": "c34ea0e6.87cdf8",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "25892498.bc4f14",
+		"name": "MYSQL",
+		"x": 540,
+		"y": 80,
+		"wires": [
+			[
+				"b5bf9af8.a6091"
+			]
+		]
+	},
+	{
+		"id": "7913ffc4.25404",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "post-timeperiod",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1000,
+		"y": 100,
+		"wires": []
+	},
+	{
+		"id": "50641b99.dfefc4",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "25892498.bc4f14",
+		"name": "MYSQL",
+		"x": 840,
+		"y": 80,
+		"wires": [
+			[
+				"7913ffc4.25404"
+			]
+		]
+	},
+	{
+		"id": "b5bf9af8.a6091",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "alarmUpdate",
+		"func": "msg.topic = \"INSERT INTO `home_alarm_state`(`state`) VALUES (1)\";\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 690,
+		"y": 80,
+		"wires": [
+			[
+				"50641b99.dfefc4"
+			]
+		]
+	},
+	{
+		"id": "6c103c58.4a1674",
+		"type": "link out",
+		"z": "5bf978a3.8d3568",
+		"name": "alarm_timeperiod_post",
+		"links": [
+			"b241f1cb.1cef3"
+		],
+		"x": 575,
+		"y": 120,
+		"wires": []
+	},
+	{
+		"id": "aa4913b8.a9b438",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/alarm/timeperiod",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 170,
+		"y": 360,
+		"wires": [
+			[
+				"bf135753.9986e"
+			]
+		]
+	},
+	{
+		"id": "7ec9d78d.41c49",
+		"type": "http response",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 670,
+		"y": 380,
+		"wires": []
+	},
+	{
+		"id": "20ef818.a370d7e",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "25892498.bc4f14",
+		"name": "MYSQL",
+		"x": 540,
+		"y": 360,
+		"wires": [
+			[
+				"b666b948.f44e1",
+				"7ec9d78d.41c49"
+			]
+		]
+	},
+	{
+		"id": "bf135753.9986e",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "PARSE payload",
+		"func": "msg.topic = \"SELECT `time_start`, `time_end` FROM `home_alarm_schedule` WHERE 1\";\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 380,
+		"y": 360,
+		"wires": [
+			[
+				"20ef818.a370d7e"
+			]
+		]
+	},
+	{
+		"id": "b666b948.f44e1",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "timeperiod-sql-res",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 990,
+		"y": 360,
+		"wires": []
+	},
+	{
+		"id": "5feecfd4.5ab1a",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/alarm=:state",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 160,
+		"y": 240,
+		"wires": [
+			[
+				"796daa05.0acb3c",
+				"432d2fa1.72db58"
+			]
+		]
+	},
+	{
+		"id": "432d2fa1.72db58",
+		"type": "http response",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 330,
+		"y": 260,
+		"wires": []
+	},
+	{
+		"id": "796daa05.0acb3c",
+		"type": "template",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"field": "payload",
+		"fieldType": "msg",
+		"format": "handlebars",
+		"syntax": "mustache",
+		"template": "{{req.params.state}}",
+		"output": "json",
+		"x": 340,
+		"y": 220,
+		"wires": [
+			[
+				"b233b6bd.26719",
+				"33a3d1e0.1c623e"
+			]
+		]
+	},
+	{
+		"id": "b233b6bd.26719",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1010,
+		"y": 220,
+		"wires": []
+	},
+	{
+		"id": "33a3d1e0.1c623e",
+		"type": "link out",
+		"z": "5bf978a3.8d3568",
+		"name": "alarm_state_get",
+		"links": [
+			"59fdea76.557494",
+			"ac3cd82e.7d7a18"
+		],
+		"x": 495,
+		"y": 260,
+		"wires": []
+	},
+	{
+		"id": "562be580.3058ac",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "alarm alert",
+		"active": true,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1010,
+		"y": 500,
+		"wires": []
+	},
+	{
+		"id": "4e92b6f4.2e0ca",
+		"type": "switch",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"property": "payload.signal",
+		"propertyType": "msg",
+		"rules": [{
+				"t": "eq",
+				"v": "1",
+				"vt": "num"
+			},
+			{
+				"t": "eq",
+				"v": "0",
+				"vt": "num"
+			}
+		],
+		"checkall": "true",
+		"repair": false,
+		"outputs": 2,
+		"x": 390,
+		"y": 580,
+		"wires": [
+			[
+				"7df6cf32.a14108",
+				"d26eb182.9db348",
+				"6250de0d.ac4e9"
+			],
+			[
+				"2c994a88.784106"
+			]
+		]
+	},
+	{
+		"id": "b84f815c.8b31e8",
+		"type": "json",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"property": "payload",
+		"action": "",
+		"pretty": true,
+		"x": 330,
+		"y": 500,
+		"wires": [
+			[
+				"4e92b6f4.2e0ca",
+				"562be580.3058ac"
+			]
+		]
+	},
+	{
+		"id": "e2d3604c.038fa",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "386b7aa4.00e7c6",
+		"name": "MYSQL",
+		"x": 780,
+		"y": 600,
+		"wires": [
+			[
+				"6cdca9fd.eed658"
+			]
+		]
+	},
+	{
+		"id": "7df6cf32.a14108",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "select zone",
+		"func": "msg.topic = \"SELECT description FROM home_zone WHERE zone = '\" + msg.payload.zone + \"';\";\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 570,
+		"y": 600,
+		"wires": [
+			[
+				"e2d3604c.038fa"
+			]
+		]
+	},
+	{
+		"id": "6cdca9fd.eed658",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "JSON create",
+		"func": "var today = new Date();\nvar day = today.getDate() + \"\";\nvar month = (today.getMonth() + 1) + \"\";\nvar year = today.getFullYear() + \"\";\nvar hour = today.getHours() + \"\";\nvar minutes = today.getMinutes() + \"\";\nvar seconds = today.getSeconds() + \"\";\nvar milliseconds = today.getMilliseconds() + \"\";\nvar date = year + \"-\" + month + \"-\" + day + \" \" + hour + \":\" + minutes + \":\" + seconds + \".\" + milliseconds + \"000\";\nmsg.payload = {\n    'lieu': msg.payload[0].description,\n    'hour': context.global.newMsg.hour,\n    'min' : context.global.newMsg.min,\n    'date' : date\n}\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 810,
+		"y": 660,
+		"wires": [
+			[
+				"f82643e4.c7487"
+			]
+		]
+	},
+	{
+		"id": "d26eb182.9db348",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "save",
+		"func": "context.global.newMsg = msg.payload;\nvar ms = context.global;\nreturn ms;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 550,
+		"y": 640,
+		"wires": [
+			[]
+		]
+	},
+	{
+		"id": "f82643e4.c7487",
+		"type": "http request",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"method": "POST",
+		"ret": "txt",
+		"url": "https://webh.ddns.net/bddapi/incident/add",
+		"tls": "",
+		"x": 970,
+		"y": 660,
+		"wires": [
+			[
+				"69f540ec.e4ab78"
+			]
+		]
+	},
+	{
+		"id": "69f540ec.e4ab78",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "response",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1020,
+		"y": 600,
+		"wires": []
+	},
+	{
+		"id": "6250de0d.ac4e9",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "insertNewAlarmState1",
+		"func": "msg.topic = \"INSERT INTO home_alarm_state (state) VALUES ('1');\"\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 600,
+		"y": 560,
+		"wires": [
+			[
+				"89a4c0fc.e2e61"
+			]
+		]
+	},
+	{
+		"id": "89a4c0fc.e2e61",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "386b7aa4.00e7c6",
+		"name": "MYSQL",
+		"x": 780,
+		"y": 560,
+		"wires": [
+			[]
+		]
+	},
+	{
+		"id": "2c994a88.784106",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "insertNewAlarmState0",
+		"func": "msg.topic = \"INSERT INTO home_alarm_state (state) VALUES (0);\"\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 560,
+		"y": 700,
+		"wires": [
+			[
+				"fe9dfdc9.000528"
+			]
+		]
+	},
+	{
+		"id": "fe9dfdc9.000528",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "386b7aa4.00e7c6",
+		"name": "MYSQL",
+		"x": 780,
+		"y": 700,
+		"wires": [
+			[
+				"fe203fe9.3d309"
+			]
+		]
+	},
+	{
+		"id": "95c8059b.8edbe8",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/disable/alarm",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 160,
+		"y": 600,
+		"wires": [
+			[
+				"7f0e4c5.b11edb4"
+			]
+		]
+	},
+	{
+		"id": "cc908517.e5138",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "Desactiver alarme",
+		"info": "",
+		"x": 150,
+		"y": 560,
+		"wires": []
+	},
+	{
+		"id": "60a7fcee.859294",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "alerte depuis homeIO",
+		"info": "",
+		"x": 160,
+		"y": 460,
+		"wires": []
+	},
+	{
+		"id": "7f0e4c5.b11edb4",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "disableAlarm",
+		"func": "msg.payload = {\"alarm\" : 0};\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 330,
+		"y": 700,
+		"wires": [
+			[
+				"2c994a88.784106",
+				"a367307d.eb00e"
+			]
+		]
+	},
+	{
+		"id": "1dc8007f.496918",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/alarm/info",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 150,
+		"y": 860,
+		"wires": [
+			[
+				"770236b3.7f8e78"
+			]
+		]
+	},
+	{
+		"id": "770236b3.7f8e78",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "getAlarmState",
+		"func": "msg.topic = \"SELECT state FROM home_alarm_state WHERE id = (SELECT MAX(id) FROM home_alarm_state)\";\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 340,
+		"y": 860,
+		"wires": [
+			[
+				"2b9163fd.70788c"
+			]
+		]
+	},
+	{
+		"id": "2b9163fd.70788c",
+		"type": "mysql",
+		"z": "5bf978a3.8d3568",
+		"mydb": "386b7aa4.00e7c6",
+		"name": "MYSQL",
+		"x": 500,
+		"y": 860,
+		"wires": [
+			[
+				"35da4825.cddb5"
+			]
+		]
+	},
+	{
+		"id": "fab588bb.8b92f",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1010,
+		"y": 860,
+		"wires": []
+	},
+	{
+		"id": "cda61d46.fec628",
+		"type": "http response",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 950,
+		"y": 900,
+		"wires": []
+	},
+	{
+		"id": "718f8c3f.83de0c",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "Recupérer l'état de l'alarme",
+		"info": "",
+		"x": 170,
+		"y": 820,
+		"wires": []
+	},
+	{
+		"id": "35da4825.cddb5",
+		"type": "change",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"rules": [{
+			"t": "set",
+			"p": "payload",
+			"pt": "msg",
+			"to": "payload[0]",
+			"tot": "msg"
+		}],
+		"action": "",
+		"property": "",
+		"from": "",
+		"to": "",
+		"reg": false,
+		"x": 660,
+		"y": 860,
+		"wires": [
+			[
+				"223e7525.d3c6ca"
+			]
+		]
+	},
+	{
+		"id": "223e7525.d3c6ca",
+		"type": "function",
+		"z": "5bf978a3.8d3568",
+		"name": "boolean",
+		"func": "if(msg.payload.state === \"1\")\n    msg.payload.state = true;\nelse\n    msg.payload.state = false;\nreturn msg;",
+		"outputs": 1,
+		"noerr": 0,
+		"x": 820,
+		"y": 860,
+		"wires": [
+			[
+				"cda61d46.fec628",
+				"fab588bb.8b92f"
+			]
+		]
+	},
+	{
+		"id": "fe203fe9.3d309",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"active": false,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1010,
+		"y": 700,
+		"wires": []
+	},
+	{
+		"id": "52d236eb.17b808",
+		"type": "link in",
+		"z": "5bf978a3.8d3568",
+		"name": "siren_alert_in",
+		"links": [
+			"45004ffe.effaa",
+			"c94bf0f.e1b399"
+		],
+		"x": 235,
+		"y": 500,
+		"wires": [
+			[
+				"b84f815c.8b31e8"
+			]
+		]
+	},
+	{
+		"id": "a367307d.eb00e",
+		"type": "link out",
+		"z": "5bf978a3.8d3568",
+		"name": "disable_alarm",
+		"links": [
+			"c3f12dc7.23d86"
+		],
+		"x": 475,
+		"y": 740,
+		"wires": []
+	},
+	{
+		"id": "59c540e4.17ca38",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "set l'état de l'alarme",
+		"info": "",
+		"x": 150,
+		"y": 180,
+		"wires": []
+	},
+	{
+		"id": "4c1952fd.819df4",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "set l'état de l'alarme",
+		"info": "",
+		"x": 150,
+		"y": 320,
+		"wires": []
+	},
+	{
+		"id": "a56a5a9f.cda5e8",
+		"type": "comment",
+		"z": "5bf978a3.8d3568",
+		"name": "couper  l'alarme",
+		"info": "c",
+		"x": 140,
+		"y": 940,
+		"wires": []
+	},
+	{
+		"id": "2e3be7c4.7cf29",
+		"type": "http in",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"url": "/cutalarm",
+		"method": "get",
+		"upload": false,
+		"swaggerDoc": "",
+		"x": 150,
+		"y": 980,
+		"wires": [
+			[
+				"6846f659.8175e8",
+				"436e34b3.6a0b1c"
+			]
+		]
+	},
+	{
+		"id": "6846f659.8175e8",
+		"type": "http response",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"statusCode": "",
+		"headers": {},
+		"x": 310,
+		"y": 1000,
+		"wires": []
+	},
+	{
+		"id": "53257f63.12b838",
+		"type": "debug",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"active": true,
+		"tosidebar": true,
+		"console": false,
+		"tostatus": false,
+		"complete": "payload",
+		"x": 1010,
+		"y": 960,
+		"wires": []
+	},
+	{
+		"id": "a124ab62.67ce8",
+		"type": "link out",
+		"z": "5bf978a3.8d3568",
+		"name": "cut_alarm",
+		"links": [
+			"894dc5f6.c6fdc8"
+		],
+		"x": 435,
+		"y": 1000,
+		"wires": []
+	},
+	{
+		"id": "436e34b3.6a0b1c",
+		"type": "template",
+		"z": "5bf978a3.8d3568",
+		"name": "",
+		"field": "payload",
+		"fieldType": "msg",
+		"format": "handlebars",
+		"syntax": "mustache",
+		"template": "0",
+		"output": "str",
+		"x": 320,
+		"y": 960,
+		"wires": [
+			[
+				"a124ab62.67ce8",
+				"53257f63.12b838"
+			]
+		]
+	},
+	{
+		"id": "25892498.bc4f14",
+		"type": "MySQLdatabase",
+		"z": "7f05e41b.e8f3fc",
+		"host": "127.0.0.1",
+		"port": "3306",
+		"db": "ps6_iot",
+		"tz": ""
+	},
+	{
+		"id": "386b7aa4.00e7c6",
+		"type": "MySQLdatabase",
+		"z": "",
+		"host": "127.0.0.1",
+		"port": "3306",
+		"db": "ps6_iot",
+		"tz": ""
+	}
+]

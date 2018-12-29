@@ -1,0 +1,14 @@
+.placement {
+  display: inline-flex;
+}
+
+.card_size {
+  width: 13.9em;
+  height: 7em;
+  background: whitesmoke;
+  margin: 2%;
+}
+
+h1 {
+  font-size: 2rem;
+}

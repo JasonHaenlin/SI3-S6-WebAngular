@@ -1,0 +1,16 @@
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.exe.config
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.exe
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.pdb
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\EngineIO.dll
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.csproj.CoreCompileInputs.cache
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.exe
+C:\Users\haenl\Documents\Polytech\SI3-S6\ProjetS6\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.pdb
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.exe.config
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.exe
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\Event Sample 1.pdb
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\bin\Debug\EngineIO.dll
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.csprojAssemblyReference.cache
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.csproj.CoreCompileInputs.cache
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.csproj.CopyComplete
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.exe
+C:\Users\Yon\Documents\PS6\back\homeio\C#\homeIo\sdk\home_io_sdk\samples\Event Sample 1\obj\Debug\Event Sample 1.pdb

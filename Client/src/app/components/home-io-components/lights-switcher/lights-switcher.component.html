@@ -1,0 +1,12 @@
+<div>
+  <div class="placement" *ngFor="let light of lightDescription">
+    <app-zone-light class="card_size" [entree]="light"></app-zone-light>
+  </div>
+</div>
+
+<div>
+  <p></p>
+  <button type="button" class="btn btn-danger btn-sm" (click)="switchAllLights(false)">Tout éteindre</button>
+  <button type="button" class="btn btn-success btn-sm" (click)="switchAllLights(true)">Tout allumer</button>
+  <p></p>
+</div>

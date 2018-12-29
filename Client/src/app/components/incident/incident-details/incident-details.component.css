@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 1%;
+}
+.error {
+	font-size: 10px;
+	margin: 0 auto;
+	color: red;
+	font-weight: bold;
+  }
+
+.modal-header {
+  background-color: rgba(84, 28, 138, 0.514);
+}
+
+.modal-container {
+  background-color: rgba(80, 91, 245, 0.1);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0px;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.list-notification {
+  height: 300px;
+  position: relative;
+  overflow: auto;
+}
+
+.description-container {
+  width: 100%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.font-p {
+  color: #5F5F5F;
+}

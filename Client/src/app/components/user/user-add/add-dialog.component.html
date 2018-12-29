@@ -1,0 +1,29 @@
+<div class="modal-container">
+  <h2 class="modal-header">Création d'un nouvel utilisateur</h2>
+
+  <img mat-card-image class="img" src="http://webh.ddns.net{{basicAvatar}}" alt="*-*">
+
+  <div class="selectAvatar">
+    <img *ngFor="let avatar of avatars" mat-card-avatar class="header-image" src="http://webh.ddns.net{{avatar.image_file}}"
+      alt="*-*" (click)="changeAvatar(this.avatar, $event)">
+  </div>
+
+  <div class="modal-body">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput id="newUserName" placeholder="Pseudonyme" />
+        <mat-hint>* Champ obligatoire</mat-hint>
+      </mat-form-field>
+
+    </form>
+
+    <p *ngIf="errorName" class="error"> Vous devez entrer un nom !</p>
+
+
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="confirm()">Confirmer</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Annuler</button>
+    </div>
+  </div>
+</div>
